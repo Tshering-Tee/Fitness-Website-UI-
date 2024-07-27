@@ -1,0 +1,37 @@
+
+<div class="">
+  <div class="row">
+    <div class="col-md-2">
+      <app-side-bar></app-side-bar>
+    </div>
+    <div class="col-md-10">
+      <div class="ekart--products--container">
+        <div class="ekart--products--items" *ngFor="let prod of product">
+          <div class="ekart--wishlist--sale--container">
+            <div class="ekart--add--to--wishlist">
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div> 
+          
+          <div class="ekart-product-images">
+            <img [src]="prod.imageURL" alt="" class="ekart-product-images" width="200px">
+          </div>
+      
+          <div class="ekart-add-to-price">
+            {{prod.price}}
+          </div>
+      
+          <div class="ekart-product-name">{{prod.name}}</div>
+      
+          <div class="ekart-product-color-available">{{prod.color.length}} Colors. Best Sellers</div>
+          
+      
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+

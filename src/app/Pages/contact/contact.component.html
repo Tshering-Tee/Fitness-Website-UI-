@@ -1,0 +1,48 @@
+<section class="page-section dialog-container " id="contact">
+  <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8 col-xl-6 text-center">
+              <h2 class="mt-0">Let's Get In Touch!</h2>
+              <hr class="divider" />
+          </div>
+      </div>
+      <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+          <div class="col-lg-6">
+              <form id="contactForm" data-sb-form-api-token="API_TOKEN" [formGroup]="contactForm" (ngSubmit)="onFormSubmitted()">
+               
+                  <div class="form-floating mb-3">
+                      <input class="form-control" type="text" placeholder="Enter your name..." formControlName="fullName" />
+                      <label for="name">Full name</label>
+                      <small *ngIf="contactForm.get('fullName')?.invalid && contactForm.get('fullName')?.touched">*Name is required field.</small>
+                  </div>
+              
+                  <div class="form-floating mb-3">
+                      <input class="form-control" type="email" placeholder="name@example.com" formControlName="Email"/>
+                      <label for="email">Email address</label>
+                      <small *ngIf="contactForm.get('Email')?.invalid && contactForm.get('Email')?.touched">*Email is required field.</small>
+                  </div>
+              
+                  <div class="form-floating mb-3">
+                      <input class="form-control" type="tel" placeholder="(123) 456-7890" formControlName="contactNumber"/>
+                      <label for="phone">Phone number</label>
+                      <small *ngIf="contactForm.get('contactNumber')?.invalid && contactForm.get('contactNumber')?.touched">*Contact-Number is required field.</small>
+                  </div>
+               
+                  <div class="form-floating mb-3">
+                      <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." formControlName="message"></textarea>
+                      <label for="message">Message</label>
+                      <small *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">*Message should required atleat 10 character</small>
+                  </div>
+             
+                  <div class="d-grid"><button class="btn btn-primary" type="submit" [disabled]="!contactForm.valid">Submit</button></div>
+              </form>
+          </div>
+      </div>
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-4 text-center mb-5 mb-lg-0">
+              <i class="bi-phone fs-2 mb-3 text-muted"></i>
+              <div>+975 17935640</div>
+          </div>
+      </div>
+  </div>
+</section>

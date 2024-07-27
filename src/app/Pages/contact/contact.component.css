@@ -1,0 +1,24 @@
+.dialog-container {
+  padding: 20px;
+  border-radius: 20px;
+}
+.divider{
+  color: orange;
+}
+.btn-primary{
+  background-color: rgb(205, 65, 14);
+  border: none;
+}
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+
+textarea.ng-invalid.ng-touched{
+  border: 2px solid red;
+}
+
+small{
+  color: red;
+  font-weight: bold;
+}

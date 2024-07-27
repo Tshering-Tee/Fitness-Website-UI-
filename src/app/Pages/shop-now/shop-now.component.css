@@ -1,0 +1,17 @@
+
+.head{
+  color: orangered; font-weight: bold;
+  font-size: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+   .col-md-3{
+    position: absolute;
+   }
+
+   .container{
+    width: 300px;
+   }
+
+}
